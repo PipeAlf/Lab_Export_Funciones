@@ -1,5 +1,6 @@
 import {PI,IVA} from "./constantes.js";
 
+
 //! Tarea 1 Ejercicio 1
 
 class areaCirc{
@@ -34,3 +35,12 @@ class Precio{
 
 const precio1 = new Precio(50,IVA);
 precio1.calculoIVA();
+
+//! Tarea 1 Ejercicio 2
+
+import { sumar,restar,multiplicar,areaCirculo } from "./operaciones-matematicas.js";
+
+console.log("Suma: ",sumar(9,7));
+console.log("Resta: ",restar(9,7));
+console.log("Multiplicación: ",multiplicar(9,7));
+console.log("Area: ", areaCirculo(9), " mm^2");
