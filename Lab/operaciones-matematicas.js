@@ -17,11 +17,6 @@ export function areaCirculo(radio){
 }
 
 export function calcularTotal(precio,cantidad){
-    // let total=0;
-    // for(let i=0;i<cantidad;i++){
-    //     total+=precio;
-    // }
-    // return total;
     return (precio*cantidad);
 }
 
@@ -31,4 +26,18 @@ export function aplicarImpuestos(total){
 
 export function aplicarDescuento(total){
     return (total-(total*DESCUENTO)).toFixed(2);
+}
+
+//! Ejercicio 5
+
+import { ROLES } from "./usuariosConstantes.js";   
+
+export function aplicarDescuentoPorRol(total,usuario){
+    let totalF=0
+    if(usuario==ROLES.ADMIN){
+        totalF=total*0.8;
+    }else if(usuario==ROLES.CLIENTE){
+        totalF=total-(total*DESCUENTO);
+    }
+    return totalF;
 }

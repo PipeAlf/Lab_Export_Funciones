@@ -81,3 +81,22 @@ const Usuario2= new crearUsuario("Carlos",ROLES.CLIENTE);
 
 console.log("El usuario ha sido creado: ", Usuario1);
 console.log("El usuario ha sido creado: ", Usuario2);
+
+//! Ejercicio 5
+
+import { aplicarDescuentoPorRol } from "./operaciones-matematicas.js";
+
+let compraAdmin = calcularTotal(25,4);
+let compraCliente = calcularTotal(50,3);
+let impAdmin = aplicarImpuestos(compraAdmin);
+let impCliente = aplicarImpuestos(compraCliente);
+let descAdmin = aplicarDescuentoPorRol(impAdmin,ROLES.ADMIN);
+let descCliente = aplicarDescuentoPorRol(impCliente,ROLES.CLIENTE);
+
+console.log("El subtotal a pagar por los productos para el: ", ROLES.ADMIN,  "es de:", compraAdmin)
+console.log("El subtotal a pagar con impuestos es de : ",impAdmin);
+console.log("El total a pagar con descuento es de: ",descAdmin);
+
+console.log("El subtotal a pagar por los productos para el: ", ROLES.CLIENTE,  "es de:", compraCliente)
+console.log("El subtotal a pagar con impuestos es de : ",impCliente);
+console.log("El total a pagar con descuento es de: ",descCliente);
