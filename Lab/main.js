@@ -1,4 +1,4 @@
-import {PI,IVA,DESCUENTO} from "./constantes.js";
+import {PI,IVA,DESCUENTO, DIAS_SEMANA} from "./constantes.js";
 
 
 //! Tarea 1 Ejercicio 1
@@ -36,6 +36,10 @@ class Precio{
 const precio1 = new Precio(50,IVA);
 precio1.calculoIVA();
 
+//! Tarea 3 Ejercicio 1
+
+console.log("El tercer día de la semana es: ",DIAS_SEMANA[2]);
+
 //! Tarea 1 Ejercicio 2
 
 import { sumar,restar,multiplicar,areaCirculo } from "./operaciones-matematicas.js";
@@ -67,3 +71,13 @@ console.log("El precio a pagar con impuestos es de: ",impuestos);
 let desc=aplicarDescuento(impuestos);
 console.log("El precio a pagar con descuento es de: ",desc);
 
+//! Ejercicio 4
+
+import { ROLES } from "./usuariosConstantes.js";
+import { crearUsuario } from "./usuarios.js";
+
+const Usuario1= new crearUsuario("Pedro",ROLES.ADMIN);
+const Usuario2= new crearUsuario("Carlos",ROLES.CLIENTE);
+
+console.log("El usuario ha sido creado: ", Usuario1);
+console.log("El usuario ha sido creado: ", Usuario2);
