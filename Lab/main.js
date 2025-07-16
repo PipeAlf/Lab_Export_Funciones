@@ -1,4 +1,4 @@
-import {PI,IVA} from "./constantes.js";
+import {PI,IVA,DESCUENTO} from "./constantes.js";
 
 
 //! Tarea 1 Ejercicio 1
@@ -44,3 +44,26 @@ console.log("Suma: ",sumar(9,7));
 console.log("Resta: ",restar(9,7));
 console.log("Multiplicación: ",multiplicar(9,7));
 console.log("Area: ", areaCirculo(9), " mm^2");
+
+//! Ejercicio 3
+
+import { calcularTotal,aplicarImpuestos,aplicarDescuento } from "./operaciones-matematicas.js";
+
+let producto1= calcularTotal(40,2);
+console.log("El monto del primer producto es: ",producto1);
+let producto2= calcularTotal(149,1);
+console.log("El monto del segundo producto es: ", producto2);
+let producto3= calcularTotal(50,3);
+console.log("El monto del tercer producto es: ",producto3);
+let total =0;
+let total1=0;
+total1=sumar(producto1,producto2);
+total=sumar(total1,producto3);
+console.log("El precio total de los productos es: ", total);
+
+let impuestos=aplicarImpuestos(total);
+console.log("El precio a pagar con impuestos es de: ",impuestos);
+
+let desc=aplicarDescuento(impuestos);
+console.log("El precio a pagar con descuento es de: ",desc);
+
